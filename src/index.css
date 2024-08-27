@@ -1,0 +1,45 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg: #222831;
+  --fg: #ff8f9a;
+}
+
+body {
+  width: 100vw;
+  min-height: 100dvh;
+  background-color: var(--bg);
+  color: var(--fg);
+  font-family: "Didact Gothic", "sans serif";
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+span {
+  padding: 2px;
+}
+
+.cheat {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100dvh;
+
+  z-index: 1000;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(5px);
+  cursor: pointer;
+}
