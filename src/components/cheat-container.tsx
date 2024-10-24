@@ -42,7 +42,7 @@ const CheatContainer = ({ cheats }: { cheats: Array<Cheat> }) => {
 
   return createPortal(
     <div
-      className={`absolute top-0 left-0 w-screen h-[100dvh] z-[1000] flex-col items-center justify-center cursor-pointer backdrop-blur ${
+      className={`absolute top-0 left-0 w-screen h-dvh z-50 flex-col items-center justify-center cursor-pointer backdrop-blur ${
         cheat === null ? "hidden" : "flex"
       }`}
       onClick={() => setCheat(null)}
