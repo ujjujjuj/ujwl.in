@@ -1,20 +1,20 @@
-import CheatContainer from "./components/CheatContainer"
-import Hesoyam from "./components/Hesoyam"
+import cheats from "./cheats"
+import CheatContainer from "./components/cheat-container"
+import { Route, BrowserRouter, Navigate, Routes } from "react-router-dom"
+import HomePage from "./pages"
+import NptelPage from "./pages/nptel"
 
 export function App() {
   return (
     <>
-      <div style={{ textAlign: "center" }}>
-        nothing to see here... or is there?
-      </div>
-      <CheatContainer
-        cheats={[
-          {
-            cheat: "hesoyam",
-            component: <Hesoyam />,
-          },
-        ]}
-      />
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/nptel" element={<NptelPage />} />
+          <Route path="*" element={<Navigate to="/" />} />
+        </Routes>
+      </BrowserRouter>
+      <CheatContainer cheats={cheats} />
     </>
   )
 }

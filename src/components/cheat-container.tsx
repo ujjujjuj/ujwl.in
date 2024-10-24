@@ -40,11 +40,14 @@ const CheatContainer = ({ cheats }: { cheats: Array<Cheat> }) => {
     })
   }, [cheats, cheatBuffer])
 
-  if (cheat === null) return null
-
   return createPortal(
-    <div className="cheat" onClick={() => setCheat(null)}>
-      {cheat.component}
+    <div
+      className={`absolute top-0 left-0 w-screen h-[100dvh] z-[1000] flex-col items-center justify-center cursor-pointer backdrop-blur ${
+        cheat === null ? "hidden" : "flex"
+      }`}
+      onClick={() => setCheat(null)}
+    >
+      {cheat && cheat.component}
     </div>,
     document.body
   )
