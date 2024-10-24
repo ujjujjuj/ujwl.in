@@ -10,8 +10,8 @@ const NptelPage = () => {
       <div className="max-w-screen-sm">
         <span className="text-xl font-bold underline">Install</span>
         <p className="text-white mb-6 ms-2">
-          Click and hold the Blue button above and drag it to your bookmarks bar
-          (You might have to enable your bookmarks bar if it's hidden)
+          Click and hold the button above and drag it to your bookmarks bar (You
+          might have to enable your bookmarks bar if it's hidden)
         </p>
         <span className="text-xl font-bold underline">Usage</span>
         <ol className="text-white list-decimal ms-5">

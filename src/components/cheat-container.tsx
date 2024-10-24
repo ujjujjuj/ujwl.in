@@ -7,7 +7,7 @@ const CLEAR_TIME = 1000
 const CheatContainer = ({ cheats }: { cheats: Array<Cheat> }) => {
   const { cheat, setCheat } = useCheatState()
 
-  const cancelTimeout = useRef<number | null>(null)
+  const cancelTimeout = useRef<NodeJS.Timeout | null>(null)
   const [cheatBuffer, setCheatBuffer] = useState<Array<string>>([])
 
   const keyboardListenerFunc = (e: KeyboardEvent) => {
